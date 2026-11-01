@@ -261,6 +261,9 @@
   }
   .cta-strip p{font-size:.9rem;color:var(--muted)}
   .cta-strip strong{color:var(--text);font-weight:600}
+  .cta-strip p a{color:var(--blue-soft);border-bottom:1px solid rgba(111,168,255,.35);transition:.2s}
+  .cta-strip p a:hover{color:#fff;border-bottom-color:#fff}
+  .cta-strip-btns{display:flex;gap:10px;flex-wrap:wrap}
 
   /* contact */
   .contact-box{
@@ -649,11 +652,17 @@
       </div>
 
       <div class="cta-strip">
-        <p><strong>Prefer email?</strong> Send a message with the role and I will reply with my CV.</p>
-        <a href="mailto:moh.ib.bekh@gmail.com" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
-          Email me
-        </a>
+        <p><a href="mailto:moh.ib.bekh@gmail.com?subject=Software%20Engineer%20role"><strong>Prefer email?</strong></a> Send a message with the role and I will reply with my CV.</p>
+        <div class="cta-strip-btns">
+          <a href="mailto:moh.ib.bekh@gmail.com?subject=Software%20Engineer%20role" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+            Email me
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=moh.ib.bekh@gmail.com&amp;su=Software%20Engineer%20role" target="_blank" rel="noopener" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg>
+            Write in Gmail
+          </a>
+        </div>
       </div>
     </div>
   </section>
