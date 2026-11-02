@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عيادة النور لطب الأسنان · حجز موعد أونلاين</title>
+<meta name="description" content="عيادة النور لطب الأسنان بالجزائر: تقويم، زرع، تجميل الأسنان، طب أسنان الأطفال. احجز موعدك في دقيقة واحدة.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --deep:#07313D; --deeper:#052630; --teal:#0FA3A3; --teal2:#12BEB0;
+    --ink:#0E2730; --body:#4A6572; --line:#E3EDF2; --bg:#F6FAFB; --gold:#C9A227; --white:#fff;
+    --shadow:0 20px 50px -28px rgba(7,49,61,.45);
+  }
+  html,body{overflow-x:hidden;}
+  body{font-family:"Segoe UI",Tahoma,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;-webkit-font-smoothing:antialiased;}
+  a{text-decoration:none;color:inherit;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px;}
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;gap:18px;padding:13px 0;}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:15px;color:var(--deep);}
+  .logo .mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(150deg,var(--teal),var(--teal2));
+    display:grid;place-items:center;box-shadow:0 10px 22px -12px rgba(15,163,163,.9);}
+  .logo span small{display:block;font-size:9.5px;color:#7C97A3;font-weight:700;letter-spacing:.4px;}
+  .nav ul{display:flex;gap:22px;list-style:none;font-size:13px;font-weight:700;color:#46606C;margin-inline-start:auto;}
+  .nav ul a:hover{color:var(--teal);}
+  .nav .cta{background:var(--deep);color:#fff;font-size:13px;font-weight:800;padding:11px 20px;border-radius:11px;white-space:nowrap;}
+  .nav .cta:hover{background:var(--teal);}
+  .burger{display:none;font-size:22px;background:none;border:0;color:var(--deep);margin-inline-start:auto;}
+  /* hero */
+  .hero{background:linear-gradient(165deg,#F0F8FA 0%,#E4F2F5 55%,#F6FAFB 100%);padding:56px 0 46px;overflow:hidden;}
+  .hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center;}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);
+    border-radius:99px;padding:7px 14px;font-size:11.5px;font-weight:800;color:var(--teal);box-shadow:var(--shadow);}
+  .dot{width:7px;height:7px;border-radius:50%;background:#20C997;box-shadow:0 0 0 4px rgba(32,201,151,.18);}
+  h1{font-size:clamp(28px,4.4vw,44px);line-height:1.25;letter-spacing:-.6px;color:var(--deep);margin:16px 0 14px;font-weight:900;}
+  h1 em{font-style:normal;color:var(--teal);}
+  .hero p{font-size:15px;color:var(--body);max-width:520px;}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:14px;padding:15px 24px;border-radius:13px;transition:.18s;border:0;cursor:pointer;font-family:inherit;}
+  .btn.primary{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#fff;box-shadow:0 18px 34px -18px rgba(15,163,163,.9);}
+  .btn.primary:hover{transform:translateY(-2px);}
+  .btn.ghost{background:#fff;color:var(--deep);border:1px solid var(--line);box-shadow:var(--shadow);}
+  .trust{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap;}
+  .trust b{display:block;font-size:20px;font-weight:900;color:var(--deep);}
+  .trust span{font-size:11px;color:#7C97A3;font-weight:700;}
+  /* hero card */
+  .hcard{background:#fff;border-radius:22px;padding:22px;box-shadow:0 36px 70px -40px rgba(7,49,61,.55);border:1px solid #EAF3F6;}
+  .hcard h4{font-size:13px;font-weight:900;color:var(--deep);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;}
+  .hcard h4 span{font-size:10.5px;color:var(--teal);font-weight:800;}
+  .slotrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;}
+  .slot{border:1px solid var(--line);background:#F7FBFC;color:var(--deep);font-size:12px;font-weight:800;
+    padding:9px 13px;border-radius:10px;cursor:pointer;transition:.15s;}
+  .slot.active{background:var(--deep);color:#fff;border-color:var(--deep);}
+  .hcard .mini{display:flex;align-items:center;gap:10px;padding:11px 0;border-top:1px dashed var(--line);font-size:12px;color:var(--body);}
+  .hcard .mini svg{flex:0 0 auto;}
+  /* sections */
+  section{padding:58px 0;}
+  .head{text-align:center;max-width:620px;margin:0 auto 34px;}
+  .head .k{font-size:11px;font-weight:900;letter-spacing:1.6px;color:var(--teal);}
+  .head h2{font-size:clamp(22px,3vw,30px);font-weight:900;color:var(--deep);margin:8px 0 8px;letter-spacing:-.4px;}
+  .head p{font-size:13.5px;color:var(--body);}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;transition:.2s;box-shadow:0 10px 30px -26px rgba(7,49,61,.5);}
+  .card:hover{transform:translateY(-4px);box-shadow:0 26px 46px -30px rgba(7,49,61,.55);border-color:#CFE7EC;}
+  .ico{width:46px;height:46px;border-radius:13px;background:linear-gradient(150deg,#E6F7F8,#D3F0F1);display:grid;place-items:center;margin-bottom:14px;}
+  .card h3{font-size:14.5px;font-weight:900;color:var(--deep);margin-bottom:6px;}
+  .card p{font-size:12.5px;color:var(--body);}
+  .card .more{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:800;color:var(--teal);}
+  /* doctors */
+  .doc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;text-align:center;}
+  .avatar{width:74px;height:74px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+    font-size:22px;font-weight:900;color:#fff;background:linear-gradient(150deg,var(--teal),#0A7C8C);}
+  .doc h3{font-size:14px;font-weight:900;color:var(--deep);}
+  .doc span{font-size:11.5px;color:var(--teal);font-weight:800;}
+  .doc p{font-size:11.5px;color:var(--body);margin-top:8px;}
+  /* booking */
+  .booking{background:linear-gradient(160deg,#062C37,#08424F 60%,#062C37);color:#fff;border-radius:26px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .booking>div{min-width:0;}
+  .booking .k{display:inline-block;}
+  .booking h2{font-size:24px;font-weight:900;margin-bottom:8px;}
+  .booking p{font-size:13px;color:#A9C6CF;}
+  .bform{min-width:0;overflow:hidden;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:20px;}
+  .f{margin-bottom:13px;}
+  .f label{display:block;font-size:11px;font-weight:800;color:#9EC0CA;margin-bottom:6px;}
+  .f select,.f input{width:100%;background:#0A3946;border:1px solid rgba(255,255,255,.16);color:#fff;
+    font-family:inherit;font-size:13px;padding:12px 13px;border-radius:11px;outline:none;}
+  .f select:focus,.f input:focus{border-color:var(--teal2);}
+  .days{display:flex;gap:7px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;}
+  .day{flex:0 0 auto;background:#0A3946;border:1px solid rgba(255,255,255,.14);color:#CFE6EC;border-radius:11px;
+    padding:8px 11px;font-size:11px;font-weight:800;cursor:pointer;text-align:center;line-height:1.5;}
+  .day.active{background:var(--teal2);color:#04212A;border-color:var(--teal2);}
+  .times{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:12px;}
+  .time{background:#0A3946;border:1px solid rgba(255,255,255,.14);color:#CFE6EC;border-radius:10px;
+    padding:9px 4px;font-size:11.5px;font-weight:800;cursor:pointer;text-align:center;}
+  .time.active{background:#fff;color:var(--deep);border-color:#fff;}
+  .time.off{opacity:.32;text-decoration:line-through;cursor:not-allowed;}
+  .bform .btn{width:100%;justify-content:center;margin-top:6px;}
+  .confirm{display:none;background:rgba(18,190,176,.14);border:1px solid rgba(18,190,176,.5);
+    border-radius:14px;padding:14px;font-size:12.5px;color:#D8F5F1;margin-top:12px;line-height:1.9;}
+  .confirm b{color:#8FF3E4;}
+  /* gallery */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .shot{border-radius:16px;min-height:150px;position:relative;overflow:hidden;
+    background:linear-gradient(150deg,#DDF1F4,#C4E4EA);display:grid;place-items:end center;padding:12px;}
+  .shot:after{content:'';position:absolute;inset:0;background:
+    radial-gradient(circle at 30% 25%,rgba(255,255,255,.75),transparent 55%);}
+  .shot span{position:relative;z-index:1;font-size:10.5px;font-weight:800;color:#3C6B78;background:rgba(255,255,255,.8);
+    padding:5px 10px;border-radius:99px;}
+  /* reviews */
+  .rev{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;}
+  .stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px;}
+  .rev p{font-size:13px;color:var(--body);}
+  .rev .who{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:11.5px;font-weight:800;color:var(--deep);}
+  .who .av{width:32px;height:32px;border-radius:50%;background:#E6F3F5;display:grid;place-items:center;color:var(--teal);font-size:12px;}
+  /* info */
+  .info{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;}
+  .box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;}
+  .row{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:12.5px;color:var(--body);}
+  .row:last-child{border:0;}
+  .row b{color:var(--deep);min-width:110px;display:inline-block;font-size:12.5px;}
+  .map{background:
+      linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px) 0 0/34px 34px,
+      linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px) 0 0/34px 34px,
+      linear-gradient(150deg,#E7F4F7,#D7EDF1);
+    border-radius:18px;min-height:250px;display:grid;place-items:center;border:1px solid var(--line);}
+  .pin{background:#fff;padding:10px 14px;border-radius:12px;box-shadow:var(--shadow);font-size:12px;font-weight:900;color:var(--deep);}
+  footer{background:var(--deeper);color:#9FBDC6;padding:36px 0;font-size:12px;}
+  footer .grid{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;}
+  footer b{color:#fff;}
+  .wa{position:fixed;bottom:20px;left:20px;z-index:60;background:#25D366;color:#fff;width:56px;height:56px;
+    border-radius:50%;display:grid;place-items:center;box-shadow:0 18px 34px -14px rgba(37,211,102,.85);}
+  .note{max-width:1120px;margin:0 auto;padding:0 20px 0;}
+  .demobadge{background:#FFF8E5;border-bottom:1px solid #F1E0B0;color:#8A6D1F;font-size:11px;
+    font-weight:800;text-align:center;padding:8px 14px;}
+  @media(max-width:860px){
+    .hero .grid,.booking,.info{grid-template-columns:1fr;}
+    .nav ul{display:none;}
+    .burger{display:block;}
+    .gal{grid-template-columns:repeat(2,1fr);}
+    .booking{padding:22px;}
+    section{padding:42px 0;}
+  }
+</style>
+</head>
+<body>
+
+<div class="demobadge">نموذج توضيحي من إعداد محمد إبراهيم بخدومة عبدي — يُبنى لاحقاً باسم عيادتك وصورها الحقيقية</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">
+      <span class="mark">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round">
+          <path d="M12 21s-6.5-4.2-6.5-9.4A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 6.5 3.6C18.5 16.8 12 21 12 21z"/>
+          <path d="M9.5 12.6l1.7 1.7 3.4-3.4"/>
+        </svg>
+      </span>
+      <span>عيادة النور<br><small>CLINIQUE ENNOUR · DENTAIRE</small></span>
+    </a>
+    <ul>
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#team">الأطباء</a></li>
+      <li><a href="#gallery">العيادة</a></li>
+      <li><a href="#booking">حجز موعد</a></li>
+      <li><a href="#contact">اتصل بنا</a></li>
+    </ul>
+    <a class="cta" href="#booking">احجز موعدك</a>
+    <button class="burger" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="pill"><span class="dot"></span> مفتوح اليوم · آخر موعد ١٩:٣٠</div>
+      <h1>ابتسامة تشبهك،<br><em>وعناية لا تُؤجَّل.</em></h1>
+      <p>عيادة النور لطب الأسنان في حيدرة، الجزائر. تقويم، زرع، تجميل، وطب أسنان الأطفال، بأحدث الأجهزة وفريق متخصص. احجز موعدك أونلاين في دقيقة واحدة، دون انتظار على الهاتف.</p>
+      <div class="actions">
+        <a class="btn primary" href="#booking">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 11h18"/></svg>
+          احجز موعداً الآن
+        </a>
+        <a class="btn ghost" href="tel:+213555646830">اتصل: 0555 64 68 30</a>
+      </div>
+      <div class="trust">
+        <div><b>12</b><span>سنة خبرة</span></div>
+        <div><b>+9.400</b><span>مريض معالج</span></div>
+        <div><b>4.9/5</b><span>تقييم المرضى</span></div>
+        <div><b>3</b><span>أطباء مختصون</span></div>
+      </div>
+    </div>
+    <div class="hcard">
+      <h4>أقرب المواعيد المتاحة <span>اليوم</span></h4>
+      <div class="slotrow">
+        <div class="slot">10:00</div>
+        <div class="slot active">11:30</div>
+        <div class="slot">14:00</div>
+        <div class="slot">16:30</div>
+      </div>
+      <div class="mini">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0FA3A3" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        تأكيد فوري برسالة واتساب
+      </div>
+      <div class="mini">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0FA3A3" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        تذكير قبل ٢٤ ساعة يقلّل الغياب
+      </div>
+      <div class="mini">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0FA3A3" stroke-width="2"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        حيدرة، الجزائر · موقف سيارات
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="k">NOS SERVICES</div>
+      <h2>خدمات تبدأ من التشخيص وتنتهي بالابتسامة</h2>
+      <p>كل خدمة لها صفحتها، صورها، وشرح مبسّط للمريض قبل الزيارة.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="ico">🦷</div><h3>زرع الأسنان</h3><p>تعويض الأسنان المفقودة بغرسات سويسرية، بتخطيط رقمي ثلاثي الأبعاد قبل العملية.</p><a class="more" href="#booking">احجز استشارة ←</a></div>
+      <div class="card"><div class="ico">😁</div><h3>تقويم الأسنان</h3><p>تقويم ثابت وشفاف للمراهقين والبالغين، مع محاكاة النتيجة قبل البدء.</p><a class="more" href="#booking">احجز تقييماً ←</a></div>
+      <div class="card"><div class="ico">✨</div><h3>تجميل الأسنان</h3><p>تبييض بالليزر، عدسات فينير، وتصميم هوليوود سمايل بمعايير الوجه.</p><a class="more" href="#booking">اطلب عرضاً ←</a></div>
+      <div class="card"><div class="ico">🧒</div><h3>طب أسنان الأطفال</h3><p>بيئة مريحة للطفل وأساليب تهدئة، ومواعيد قصيرة لا تُتعب الصغير.</p><a class="more" href="#booking">احجز موعد طفلك ←</a></div>
+      <div class="card"><div class="ico">🩺</div><h3>علاج اللثة</h3><p>تنظيف عميق ومعالجة التهاب اللثة مع متابعة بعد العلاج.</p><a class="more" href="#booking">احجز فحصاً ←</a></div>
+      <div class="card"><div class="ico">🚑</div><h3>الحالات المستعجلة</h3><p>ألم حاد أو كسر سن؟ خطّ هاتفي للحالات المستعجلة بنفس اليوم.</p><a class="more" href="tel:+213555646830">اتصل الآن ←</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="team" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head">
+      <div class="k">NOTRE ÉQUIPE</div>
+      <h2>فريق تعرف اسمه قبل أن تدخل</h2>
+      <p>لكل طبيب صفحة بخبراته وشهاداته، حتى يختار المريض من يثق به.</p>
+    </div>
+    <div class="cards">
+      <div class="doc"><div class="avatar">د. ن</div><h3>د. نور الهدى بن علي</h3><span>تقويم الأسنان · 12 سنة</span><p>مختصة في التقويم الشفاف وتقويم الأطفال، شهادة جامعة الجزائر ١.</p></div>
+      <div class="doc"><div class="avatar">د. ي</div><h3>د. ياسين مرزوق</h3><span>زرع وجراحة فموية · 9 سنوات</span><p>أكثر من ٨٠٠ غرسة، تدريب في إسطنبول على الزرع الفوري.</p></div>
+      <div class="doc"><div class="avatar">د. س</div><h3>د. سارة حداد</h3><span>تجميل الأسنان · 7 سنوات</span><p>تصميم الابتسامة الرقمي، الفينير والتبييض بالليزر.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <div class="booking">
+      <div>
+        <div class="k" style="font-size:11px;font-weight:900;letter-spacing:1.6px;color:#5EE6D8">RENDEZ-VOUS EN LIGNE</div>
+        <h2>احجز في ثلاث نقرات</h2>
+        <p>اختر الخدمة، ثم اليوم والساعة المتاحة، واكتب اسمك ورقمك. يصلك تأكيد فوري، وتذكير قبل الموعد بيوم. لا مكالمات، ولا انتظار.</p>
+        <div style="margin-top:22px;display:grid;gap:10px;font-size:12.5px;color:#A9C6CF">
+          <div>✓ ٩٦٪ من الغياب يُقلَّل بفضل التذكير التلقائي</div>
+          <div>✓ الحجز متاح ٢٤ ساعة، حتى خارج أوقات العمل</div>
+          <div>✓ يمكنك تعديل الموعد أو إلغاؤه من نفس الرابط</div>
+        </div>
+      </div>
+      <form class="bform" id="bform" onsubmit="return false">
+        <div class="f"><label>الخدمة</label>
+          <select id="svc">
+            <option>استشارة عامة</option>
+            <option>تقويم الأسنان</option>
+            <option>زرع الأسنان</option>
+            <option>تجميل / تبييض</option>
+            <option>طب أسنان الأطفال</option>
+            <option>حالة مستعجلة</option>
+          </select>
+        </div>
+        <div class="f"><label>اليوم</label><div class="days" id="days"></div></div>
+        <div class="f"><label>الساعة</label><div class="times" id="times"></div></div>
+        <div class="f"><label>الاسم الكامل</label><input id="nm" placeholder="مثال: أمين بوعزة"></div>
+        <div class="f"><label>رقم الهاتف</label><input id="ph" inputmode="tel" placeholder="05 __ __ __ __"></div>
+        <button class="btn primary" id="go">تأكيد الحجز</button>
+        <div class="confirm" id="confirm"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head">
+      <div class="k">LA CLINIQUE</div>
+      <h2>عيادة تراها قبل أن تزورها</h2>
+      <p>صور حقيقية للاستقبال، غرف العلاج، والأجهزة. هذه أماكن مؤقتة في النموذج، تُستبدل بصور عيادتك.</p>
+    </div>
+    <div class="gal">
+      <div class="shot"><span>الاستقبال</span></div>
+      <div class="shot"><span>غرفة العلاج ١</span></div>
+      <div class="shot"><span>جهاز الأشعة</span></div>
+      <div class="shot"><span>قاعة الأطفال</span></div>
+      <div class="shot"><span>غرفة التعقيم</span></div>
+      <div class="shot"><span>المدخل</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head"><div class="k">AVIS PATIENTS</div><h2>ماذا يقول المرضى</h2></div>
+    <div class="cards">
+      <div class="rev"><div class="stars">★★★★★</div><p>«حجزت من الهاتف ليلاً ووصلني التأكيد في نفس اللحظة. أول مرة لا أنتظر على الهاتف.»</p><div class="who"><span class="av">أ</span> أمين · حيدرة</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>«الدكتورة شرحت لي كل خطوة قبل التقويم، والصور في الموقع ساعدتني أختار.»</p><div class="who"><span class="av">ل</span> لينا · بئر مراد رايس</div></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>«ابني كان يخاف طبيب الأسنان، هنا تعاملوا معه بهدوء وخروج بابتسامة.»</p><div class="who"><span class="av">م</span> محمد · الأبيار</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="head"><div class="k">CONTACT</div><h2>أوقات العمل والوصول</h2></div>
+    <div class="info">
+      <div class="box">
+        <div class="row"><b>العنوان</b><span>شارع أحمد ولد حمودة، حيدرة، الجزائر العاصمة</span></div>
+        <div class="row"><b>الهاتف</b><span dir="ltr">+213 555 64 68 30</span></div>
+        <div class="row"><b>البريد</b><span dir="ltr">contact@clinique-ennour.dz</span></div>
+        <div class="row"><b>السبت – الخميس</b><span>09:00 – 19:30</span></div>
+        <div class="row"><b>الجمعة</b><span>مغلق (الطوارئ فقط)</span></div>
+        <div class="row"><b>الدفع</b><span>نقداً · بطاقة · تقسيط للعلاجات الطويلة</span></div>
+      </div>
+      <div class="map"><div class="pin">📍 عيادة النور · حيدرة</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap grid">
+    <div><b>عيادة النور لطب الأسنان</b><br>حيدرة، الجزائر العاصمة</div>
+    <div>نموذج من إعداد <b>محمد إبراهيم بخدومة عبدي</b> · مهندس برمجيات<br>moh.ib.bekh@gmail.com · +213 555 64 68 30</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/213555646830" aria-label="واتساب">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 2a8 8 0 1 1-4.2 14.8l-.4-.2-3 .8.8-2.9-.2-.4A8 8 0 0 1 12 4zm-3 4.3c-.2 0-.5.1-.7.4-.2.3-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.5 2.4 3.7 3.2 1.8.7 2.2.6 2.6.5.4 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1l-.5-.3-1.4-.7c-.2-.1-.4-.1-.5.1l-.6.8c-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.7-1-.6-.6-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4 0-.2 0-.3-.1-.4l-.6-1.4c-.1-.3-.2-.3-.4-.3z"/></svg>
+</a>
+
+<script>
+(function(){
+  var FD=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+  var MO=['يناير','فبراير','مارس','أفريل','ماي','جوان','جويلية','أوت','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+  var daysEl=document.getElementById('days'), timesEl=document.getElementById('times');
+  var picked={day:null,time:null};
+  var now=new Date();
+  for(var i=0;i<7;i++){
+    var d=new Date(now.getTime()+i*86400000);
+    var el=document.createElement('div');
+    el.className='day'+(i===0?' active':'');
+    var closed=(d.getDay()===5);
+    el.innerHTML=FD[d.getDay()]+'<br>'+d.getDate()+' '+MO[d.getMonth()];
+    if(closed){ el.style.opacity=.4; el.style.pointerEvents='none'; }
+    (function(dd,node,idx){
+      node.onclick=function(){
+        [].forEach.call(daysEl.children,function(c){c.classList.remove('active');});
+        node.classList.add('active');
+        picked.day=FD[dd.getDay()]+' '+dd.getDate()+' '+MO[dd.getMonth()];
+        picked.time=null; buildTimes();
+      };
+      if(idx===0){ picked.day=FD[dd.getDay()]+' '+dd.getDate()+' '+MO[dd.getMonth()]; }
+    })(d,el,i);
+    daysEl.appendChild(el);
+  }
+  function buildTimes(){
+    timesEl.innerHTML='';
+    var slots=['09:00','09:45','10:30','11:15','12:00','14:00','14:45','15:30','16:15','17:00','17:45','18:30'];
+    slots.forEach(function(s,i){
+      var t=document.createElement('div');
+      t.className='time'+(i===6?' off':'');
+      t.textContent=s;
+      if(i!==6){ t.onclick=function(){
+        [].forEach.call(timesEl.children,function(c){c.classList.remove('active');});
+        t.classList.add('active'); picked.time=s;
+      };}
+      timesEl.appendChild(t);
+    });
+  }
+  buildTimes();
+  document.getElementById('go').onclick=function(){
+    var nm=document.getElementById('nm').value.trim();
+    var ph=document.getElementById('ph').value.trim();
+    var svc=document.getElementById('svc').value;
+    var c=document.getElementById('confirm');
+    if(!picked.time){ c.style.display='block'; c.innerHTML='اختر الساعة أولاً.'; return; }
+    if(nm.length<3){ c.style.display='block'; c.innerHTML='اكتب اسمك الكامل.'; return; }
+    if(ph.replace(/\D/g,'').length<9){ c.style.display='block'; c.innerHTML='اكتب رقم هاتف صحيح.'; return; }
+    c.style.display='block';
+    c.innerHTML='<b>تم حجز موعدك ✓</b><br>'+svc+' · '+picked.day+' على الساعة '+picked.time+
+      '<br>الاسم: '+nm+' · الهاتف: '+ph+
+      '<br><span style="color:#9EC0CA">هذا نموذج توضيحي: في الموقع الحقيقي يصلك تأكيد على واتساب ورسالة تذكير قبل الموعد.</span>';
+  };
+})();
+</script>
+</body>
+</html>
