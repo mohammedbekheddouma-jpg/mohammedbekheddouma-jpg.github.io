@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نظام رقمي كامل للعيادة · محمد إبراهيم بخدومة عبدي</title>
+<meta name="description" content="موقع طبي احترافي + حجز موعد أونلاين + أتمتة واتساب + ظهور في جوجل. عرض متكامل للعيادات الخاصة بالجزائر.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{--bg:#05101A;--surf:#0B1B28;--line:rgba(255,255,255,.10);--ink:#EAF3FA;--dim:#8FA6B8;
+        --teal:#22D3A8;--cyan:#38BDF8;--gold:#F5C46A;}
+  body{font-family:"Segoe UI",Tahoma,system-ui,sans-serif;background:
+      radial-gradient(70% 45% at 50% -10%,rgba(34,211,168,.20),transparent 70%),
+      radial-gradient(60% 40% at 90% 20%,rgba(56,189,248,.14),transparent 70%),
+      var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+  header{padding:26px 0 10px;}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:15px;letter-spacing:.3px;}
+  .dot{width:36px;height:36px;border-radius:11px;background:linear-gradient(150deg,var(--teal),var(--cyan));
+       display:grid;place-items:center;color:#04121C;font-size:15px;font-weight:900;}
+  .hero{padding:34px 0 10px;}
+  .kicker{display:inline-block;font-size:11px;font-weight:900;letter-spacing:1.4px;color:var(--teal);
+          border:1px solid rgba(34,211,168,.35);background:rgba(34,211,168,.08);border-radius:99px;padding:7px 14px;}
+  h1{font-size:clamp(28px,5vw,46px);line-height:1.25;font-weight:900;margin:18px 0 14px;letter-spacing:-.5px;}
+  h1 span{background:linear-gradient(94deg,var(--teal),var(--cyan) 60%,#A5B4FC);
+          -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lead{font-size:16px;color:#C6D6E4;max-width:760px;}
+  .fr{font-size:12.5px;color:var(--dim);font-style:italic;margin-top:10px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:26px 0 8px;}
+  .stat{background:linear-gradient(165deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+        border:1px solid var(--line);border-radius:16px;padding:16px;}
+  .stat b{display:block;font-size:22px;font-weight:900;color:#fff;}
+  .stat span{font-size:11px;color:var(--dim);font-weight:700;}
+  section{padding:38px 0;border-top:1px solid var(--line);margin-top:34px;}
+  h2{font-size:22px;font-weight:900;margin-bottom:6px;}
+  h2 em{font-style:normal;color:var(--teal);}
+  .sub{color:var(--dim);font-size:13px;margin-bottom:22px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .card{background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+        border:1px solid var(--line);border-radius:18px;padding:20px;}
+  .card h3{font-size:14.5px;font-weight:900;margin-bottom:8px;}
+  .card p{font-size:12.5px;color:#B9CBDA;}
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .tier{background:linear-gradient(170deg,rgba(255,255,255,.065),rgba(255,255,255,.02));
+        border:1px solid var(--line);border-radius:22px;padding:24px;position:relative;}
+  .tier.mid{border-color:rgba(34,211,168,.55);box-shadow:0 24px 60px -34px rgba(34,211,168,.8);}
+  .tier .tag{position:absolute;top:-11px;right:22px;background:linear-gradient(135deg,var(--teal),var(--cyan));
+             color:#04121C;font-size:10px;font-weight:900;padding:5px 12px;border-radius:99px;}
+  .tier h3{font-size:15px;font-weight:900;margin-bottom:4px;}
+  .price{font-size:27px;font-weight:900;margin:12px 0 2px;letter-spacing:-.5px;}
+  .price small{font-size:12px;color:var(--dim);font-weight:700;}
+  .tier ul{list-style:none;margin-top:14px;display:grid;gap:8px;}
+  .tier li{font-size:12.5px;color:#C6D6E4;padding-right:22px;position:relative;}
+  .tier li:before{content:"✓";position:absolute;right:0;color:var(--teal);font-weight:900;}
+  .tier li.no{color:#6B7C8C;}
+  .tier li.no:before{content:"—";color:#40505F;}
+  .steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));}
+  .step{border-right:2px solid rgba(34,211,168,.5);padding:2px 16px 2px 0;}
+  .step .n{font-size:11px;font-weight:900;color:var(--teal);letter-spacing:1px;}
+  .step b{display:block;font-size:13.5px;margin:4px 0 3px;}
+  .step span{font-size:12px;color:var(--dim);}
+  .calc{background:linear-gradient(165deg,rgba(34,211,168,.10),rgba(56,189,248,.04));
+        border:1px solid rgba(34,211,168,.28);border-radius:20px;padding:22px;}
+  .calc .row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px;}
+  .calc label{font-size:12.5px;color:#C6D6E4;font-weight:700;min-width:190px;}
+  .calc input[type=range]{flex:1;min-width:150px;accent-color:var(--teal);}
+  .calc .val{font-size:14px;font-weight:900;color:#fff;min-width:110px;text-align:left;}
+  .result{margin-top:8px;padding-top:16px;border-top:1px dashed rgba(255,255,255,.16);
+          font-size:14px;color:#DCEAF5;}
+  .result b{color:var(--teal);font-size:18px;}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:900;font-size:14px;
+       padding:15px 24px;border-radius:14px;transition:transform .15s;}
+  .btn:active{transform:scale(.98);}
+  .btn.primary{background:linear-gradient(135deg,var(--teal),var(--cyan));color:#04121C;}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.05);}
+  footer{padding:34px 0 50px;color:#6B7C8C;font-size:11.5px;border-top:1px solid var(--line);margin-top:34px;}
+  footer b{color:#9FB4C6;}
+  .lockbadge{display:inline-flex;gap:7px;align-items:center;font-size:11px;color:var(--dim);
+             border:1px solid var(--line);border-radius:99px;padding:6px 12px;margin-top:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="dot">م</div><div>محمد إبراهيم بخدومة عبدي<br><span style="font-size:10.5px;color:var(--dim);font-weight:700">مهندس برمجيات · أنظمة ويب للقطاع الطبي</span></div></div>
+  </header>
+
+  <div class="hero">
+    <span class="kicker">عرض متكامل للعيادات والمجموعات الطبية</span>
+    <h1>عيادتك تستقبل المرضى<br><span>حتى في الليل، وحدها.</span></h1>
+    <p class="lead">نظام رقمي كامل: موقع طبي احترافي، حجز موعد أونلاين يعمل ٢٤ ساعة، أتمتة واتساب للتذكير والاستقبال، وظهور في نتائج جوجل المحلية. لا موقع «ديكور» يُنسى بعد شهرين، بل أداة عمل تُدخل مرضى جدد كل أسبوع.</p>
+    <p class="fr">Site médical + prise de rendez-vous en ligne + automatisation WhatsApp + référencement local. Un système, pas une vitrine.</p>
+    <div class="stats">
+      <div class="stat"><b>أقل من ثانية</b><span>زمن تحميل الموقع على الهاتف</span></div>
+      <div class="stat"><b>٢٤/٧</b><span>استقبال الحجوزات بلا موظفة</span></div>
+      <div class="stat"><b>٣ إلى ٦ أسابيع</b><span>مدة التسليم الكاملة</span></div>
+      <div class="stat"><b>١٢ شهراً</b><span>ضمان ودعم تقني</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2>المشكلة التي <em>تخسر بها مرضى كل يوم</em></h2>
+    <p class="sub">Le vrai coût n'est pas le site : c'est le patient qui appelle quand vous êtes en consultation.</p>
+    <div class="grid">
+      <div class="card"><h3>المريض يتصل ولا أحد يرد</h3><p>خلال العمل على المريض، الهاتف يرن ولا يمكن الرد. ذلك المريض يتصل بعيادة أخرى في نفس الدقيقة.</p></div>
+      <div class="card"><h3>لا وجود في بحث جوجل</h3><p>من يبحث «طبيب أسنان في حيدرة» أو «زرع أسنان الجزائر» لا يجدك، لأن صفحة فيسبوك لا تُصنَّف مثل موقع.</p></div>
+      <div class="card"><h3>صور قديمة وموقع بطيء</h3><p>موقع يفتح في ٨ ثوان على الهاتف يُغلق قبل أن يراه المريض، وصورة عيادة من ٢٠١٨ تقتل الثقة.</p></div>
+      <div class="card"><h3>لا بيانات ولا متابعة</h3><p>لا تعرف كم مريضاً وصلك من الإنترنت، ولا كم منهم عاد. القرارات تصبح بالتخمين.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>ماذا تحصل عليه <em>فعلياً</em></h2>
+    <p class="sub">كل ما يلي مبني على مقاس عيادتك، ومكتوب بشيفرة نظيفة تعمل سنوات.</p>
+    <div class="grid">
+      <div class="card"><h3>موقع طبي احترافي</h3><p>عربي وفرنسي، صور حقيقية للعيادة، صفحة لكل خدمة (تقويم، زرع، تجميل، أطفال)، وسرعة قصوى على الهاتف.</p></div>
+      <div class="card"><h3>حجز موعد أونلاين</h3><p>المريض يختار الخدمة والطبيب والوقت المتاح، ويصلك إشعار فوري. تُلغى المكالمات المتبادلة.</p></div>
+      <div class="card"><h3>أتمتة واتساب</h3><p>تأكيد الحجز، تذكير قبل ٢٤ ساعة (يقلّل الغياب)، وإعادة تفعيل المرضى القدامى كل ٦ أشهر.</p></div>
+      <div class="card"><h3>ظهور في جوجل</h3><p>تهيئة تقنية كاملة + ملف نشاط تجاري + صفحات محلية لكل فرع، لتظهر حين يبحث المريض عنك في مدينتك.</p></div>
+      <div class="card"><h3>لوحة تحكم</h3><p>المواعيد، المرضى، الخدمات الأكثر طلباً، مصادر الحجوزات، وقارئ رسائل جاهز للفريق.</p></div>
+      <div class="card"><h3>تدريب ودعم</h3><p>جلسة تدريب لموظفي الاستقبال، دليل مكتوب، ودعم تقني متواصل طوال مدة العقد.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>ثلاث <em>باقات</em> بحسب حجم العيادة</h2>
+    <p class="sub">الأسعار بالدينار الجزائري، وتشمل التصميم والتطوير والنشر والتدريب.</p>
+    <div class="tiers">
+      <div class="tier">
+        <h3>الباقة الأساسية</h3>
+        <p style="font-size:12px;color:var(--dim)">عيادة واحدة، طبيب أو طبيبان</p>
+        <div class="price">3.000.000 <small>دج</small></div>
+        <ul>
+          <li>موقع احترافي عربي/فرنسي (٦ صفحات)</li>
+          <li>حجز موعد أونلاين + إشعارات</li>
+          <li>تصوير احترافي للعيادة (نصف يوم)</li>
+          <li>تهيئة جوجل + ملف نشاط محلي</li>
+          <li>استضافة ودومين سنة كاملة</li>
+          <li>دعم ٣ أشهر</li>
+        </ul>
+      </div>
+      <div class="tier mid">
+        <span class="tag">الأكثر طلباً</span>
+        <h3>باقة المجموعة</h3>
+        <p style="font-size:12px;color:var(--dim)">عيادة بعدة أطباء أو فرعين</p>
+        <div class="price">4.200.000 <small>دج</small></div>
+        <ul>
+          <li>كل ما في الأساسية</li>
+          <li>صفحة مستقلة لكل فرع + خريطة</li>
+          <li>أتمتة واتساب كاملة (تذكير ومتابعة)</li>
+          <li>لوحة تحكم المواعيد والمرضى</li>
+          <li>ملف تعريفي لكل طبيب</li>
+          <li>تهيئة جوجل لستة أشهر + تقارير شهرية</li>
+          <li>دعم ٦ أشهر</li>
+        </ul>
+      </div>
+      <div class="tier">
+        <h3>التحوّل الكامل</h3>
+        <p style="font-size:12px;color:var(--dim)">مجموعة طبية أو مركز جراحي</p>
+        <div class="price">5.000.000 <small>دج</small></div>
+        <ul>
+          <li>كل ما في باقة المجموعة</li>
+          <li>ربط بسجل المرضى ونظام الفوترة</li>
+          <li>بوابة المريض (تحاليل، وصفات، مواعيده)</li>
+          <li>إدارة حملات إعلانية ٣ أشهر</li>
+          <li>تدريب الفريق + دليل تشغيل</li>
+          <li>دعم وصيانة ١٢ شهراً</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="tel:+213555646830">اتصل بي الآن · 0555 64 68 30</a>
+      <a class="btn ghost" href="https://mohammedbekheddouma-jpg.github.io/">أعمالي</a>
+    </div>
+    <div class="lockbadge">الدفع على ثلاث دفعات: ٤٠٪ عند البدء · ٣٠٪ عند قبول التصميم · ٣٠٪ عند النشر</div>
+  </section>
+
+  <section>
+    <h2>طريقة العمل في <em>أربع مراحل</em></h2>
+    <p class="sub">Trois à six semaines, sans interrompre votre activité.</p>
+    <div class="steps">
+      <div class="step"><div class="n">٠١</div><b>التحليل</b><span>جلسة معك، دراسة خدماتك ومنافسيك في مدينتك.</span></div>
+      <div class="step"><div class="n">٠٢</div><b>التصميم</b><span>نموذج أولي للصفحة الرئيسية للموافقة قبل البناء.</span></div>
+      <div class="step"><div class="n">٠٣</div><b>البناء</b><span>الموقع، الحجز، واتساب، لوحة التحكم، وربط الدومين.</span></div>
+      <div class="step"><div class="n">٠٤</div><b>الإطلاق والنمو</b><span>التدريب، النشر، جوجل، ثم تقارير شهرية بالأرقام.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>احسب <em>عائد الاستثمار</em> بنفسك</h2>
+    <p class="sub">حرّك المؤشرين لترى كم شهراً يحتاج المشروع ليسدّد نفسه.</p>
+    <div class="calc">
+      <div class="row"><label>مرضى جدد إضافيون شهرياً</label>
+        <input id="p" type="range" min="2" max="60" value="15"><div class="val" id="pv">15 مريضاً</div></div>
+      <div class="row"><label>متوسط قيمة علاج المريض (دج)</label>
+        <input id="v" type="range" min="3000" max="120000" step="1000" value="25000"><div class="val" id="vv">25.000 دج</div></div>
+      <div class="row"><label>سعر المشروع (دج)</label>
+        <input id="c" type="range" min="3000000" max="5000000" step="100000" value="4200000"><div class="val" id="cv">4.200.000 دج</div></div>
+      <div class="result" id="res"></div>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <h2>لمن هذا العرض <em>ولمن ليس له</em></h2>
+    <div class="grid">
+      <div class="card"><h3>مناسب لك</h3><p>عيادة أو مجموعة طبية بعدة أطباء، مركز جراحي أو تجميل، أو عيادة تفكر في فرع ثانٍ، وتريد أن يصبح الإنترنت مصدر مرضى منتظم.</p></div>
+      <div class="card"><h3>غير مناسب</h3><p>من يريد صفحة واحدة بأقل سعر، أو لا يريد الالتزام بصور حقيقية ومحتوى صحيح. أنا لا أسلّم أعمالاً لا أستطيع الدفاع عنها.</p></div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="mailto:moh.ib.bekh@gmail.com?subject=أريد%20نظاماً%20رقمياً%20لعيادتي">راسلني بالبريد</a>
+      <a class="btn ghost" href="tel:+213555646830">مكالمة مباشرة</a>
+    </div>
+  </section>
+
+  <footer>
+    <b>محمد إبراهيم بخدومة عبدي</b> · مهندس برمجيات · الجزائر<br>
+    moh.ib.bekh@gmail.com · +213 555 64 68 30 · <span dir="ltr">mohammedbekheddouma-jpg.github.io</span>
+  </footer>
+</div>
+
+<script>
+  var p=document.getElementById('p'), v=document.getElementById('v'), c=document.getElementById('c');
+  function fmt(n){ return n.toLocaleString('fr-FR').replace(/\u202f/g,' '); }
+  function calc(){
+    var P=+p.value, V=+v.value, C=+c.value;
+    document.getElementById('pv').textContent=P+' مريضاً';
+    document.getElementById('vv').textContent=fmt(V)+' دج';
+    document.getElementById('cv').textContent=fmt(C)+' دج';
+    var monthly=P*V, months=monthly>0?(C/monthly):0, year=monthly*12;
+    document.getElementById('res').innerHTML =
+      'إيراد إضافي شهري متوقع: <b>'+fmt(monthly)+' دج</b> · مشروع يتسدد في <b>'+
+      (months<1?'أقل من شهر':months.toFixed(1)+' شهر')+'</b><br>'+
+      '<span style="color:#8FA6B8;font-size:12.5px">أي '+fmt(year)+' دج في السنة الأولى، مقابل '+fmt(C)+' دج تُدفع مرة واحدة.</span>';
+  }
+  [p,v,c].forEach(function(el){ el.addEventListener('input',calc); });
+  calc();
+</script>
+</body>
+</html>
