@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>تعلّم البرمجة | دليل عملي من محمد إبراهيم بخدومة عبدي</title>
-<meta name="description" content="دليل عربي عملي لتعلّم تطوير الويب والموبايل والديسكتوب، الفرونت إند والباك إند، DevOps وعلوم البيانات، بخطة ومشاريع ومصادر مجانية." />
+<title>تعلّم البرمجة | خريطة هندسة البرمجيات من محمد إبراهيم بخدومة عبدي</title>
+<meta name="description" content="خريطة كاملة لتعلّم هندسة البرمجيات: الأساسيات المشتركة، الفرونت إند، الباك إند، الويب، الموبايل، الديسكتوب، DevOps وعلوم البيانات، مع مشاريع تطبيقية وترتيب مقترح." />
 <meta name="author" content="Mohammed Ibrahim Bekheddouma Abdi" />
 <meta name="theme-color" content="#050A16" />
 <link rel="manifest" href="manifest.webmanifest" />
@@ -15,93 +15,76 @@
 <meta name="mobile-web-app-capable" content="yes" />
 <link rel="canonical" href="https://mohammedbekheddouma-jpg.github.io/learn/" />
 <style>
-  :root{
-    --bg:#050A16; --surface:#0B1526; --surface-2:#0E1A30; --blue:#2F6FED; --blue-soft:#6FA8FF;
-    --text:#E9EFFA; --muted:#8794A8; --line:rgba(120,150,200,.16); --ok:#2ECC8F; --radius:16px;
-  }
+  :root{--bg:#050A16;--surface:#0B1526;--surface-2:#0E1A30;--blue:#2F6FED;--blue-soft:#6FA8FF;--text:#E9EFFA;--muted:#8794A8;--line:rgba(120,150,200,.16);--ok:#2ECC8F;--radius:16px}
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;background:
-      radial-gradient(1100px 500px at 88% -8%, rgba(47,111,237,.18), transparent 60%),
-      radial-gradient(800px 400px at 0% 10%, rgba(47,111,237,.08), transparent 60%),
-      var(--bg);
-    color:var(--text);
-    font-family:system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;
-    line-height:1.85; -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  html{scroll-behavior:smooth;scroll-padding-top:78px}
+  body{margin:0;background:radial-gradient(1100px 500px at 88% -8%,rgba(47,111,237,.18),transparent 60%),radial-gradient(800px 400px at 0% 10%,rgba(47,111,237,.08),transparent 60%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 18px}
   a{color:var(--blue-soft);text-decoration:none}
   a:hover{text-decoration:underline}
-
-  header.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(5,10,22,.86);backdrop-filter:blur(10px)}
-  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:14px;padding-bottom:14px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700}
-  .brand .mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(140deg,var(--blue),#1B4CB0);display:grid;place-items:center;font-size:.85rem;letter-spacing:.5px}
-  .brand small{display:block;color:var(--muted);font-weight:500;font-size:.72rem}
-  .nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
-  .nav a{font-size:.8rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+  header.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20;background:rgba(5,10,22,.9);backdrop-filter:blur(10px)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.98rem}
+  .brand .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(140deg,var(--blue),#1B4CB0);display:grid;place-items:center;font-size:.8rem}
+  .brand small{display:block;color:var(--muted);font-weight:500;font-size:.7rem}
+  .nav{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{font-size:.76rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:5px 11px;white-space:nowrap}
   .nav a:hover{color:var(--text);border-color:rgba(47,111,237,.55);text-decoration:none}
-
-  .hero{padding:64px 0 34px}
-  .eyebrow{display:inline-block;font-size:.72rem;letter-spacing:.16em;color:var(--blue-soft);border:1px solid rgba(47,111,237,.4);background:rgba(47,111,237,.1);border-radius:999px;padding:6px 14px}
-  h1{font-size:clamp(2rem,5vw,3rem);line-height:1.25;margin:18px 0 8px}
+  .hero{padding:44px 0 22px}
+  .eyebrow{display:inline-block;font-size:.7rem;letter-spacing:.14em;color:var(--blue-soft);border:1px solid rgba(47,111,237,.4);background:rgba(47,111,237,.1);border-radius:999px;padding:5px 13px}
+  h1{font-size:clamp(1.7rem,5.4vw,2.6rem);line-height:1.3;margin:16px 0 8px}
   h1 .accent{color:var(--blue-soft)}
-  .sub{color:var(--muted);max-width:60ch;font-size:1.02rem}
-  .owner{margin-top:18px;font-size:.9rem;color:var(--muted)}
+  .sub{color:var(--muted);font-size:.98rem;margin:0}
+  .owner{margin-top:14px;font-size:.86rem;color:var(--muted)}
   .owner b{color:var(--text)}
-
-  .statbar{display:flex;align-items:center;gap:16px;margin:26px 0 0;padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(120deg,rgba(47,111,237,.14),var(--surface) 65%)}
-  .statbar .pct{font-size:1.6rem;font-weight:800;color:var(--blue-soft);min-width:64px;text-align:center}
-  .statbar .meter{flex:1}
-  .meter .track{height:9px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
-  .meter .fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--blue-soft));transition:width .35s ease}
-  .meter .label{font-size:.8rem;color:var(--muted);margin-top:7px}
-
-  section{padding:34px 0}
-  h2{font-size:1.5rem;margin:0 0 6px}
-  h2 .num{color:var(--blue-soft);font-size:.8rem;letter-spacing:.18em;display:block;margin-bottom:6px;font-weight:600}
-  .lead{color:var(--muted);margin:0 0 22px;max-width:70ch}
-
-  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-  .rule{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
-  .rule b{display:block;margin-bottom:4px}
-  .rule span{color:var(--muted);font-size:.9rem}
-
-  .tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
-  .track{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column}
-  .track header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:6px}
-  .track h3{margin:0;font-size:1.12rem}
-  .track .tag{font-size:.68rem;color:var(--blue-soft);border:1px solid rgba(47,111,237,.35);border-radius:999px;padding:3px 9px;white-space:nowrap}
-  .track p.note{color:var(--muted);font-size:.88rem;margin:0 0 14px}
-  .track ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
-  .track li{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:#CBD7E8}
-  .track input[type=checkbox]{appearance:none;width:19px;height:19px;flex:0 0 19px;margin-top:3px;border:1.5px solid rgba(140,170,220,.5);border-radius:6px;background:transparent;cursor:pointer;transition:.15s}
-  .track input[type=checkbox]:checked{background:var(--blue);border-color:var(--blue)}
-  .track input[type=checkbox]:checked::after{content:"✓";display:block;color:#fff;font-size:.78rem;line-height:16px;text-align:center}
-  .track .proj{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:.86rem;color:var(--muted)}
-  .track .proj b{color:var(--text)}
-  .track .bar{height:5px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:14px;overflow:hidden}
-  .track .bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
-
-  table{width:100%;border-collapse:collapse;font-size:.9rem;background:var(--surface);border-radius:var(--radius);overflow:hidden}
-  th,td{padding:12px 14px;text-align:right;border-bottom:1px solid var(--line)}
-  th{background:rgba(47,111,237,.12);font-size:.8rem;letter-spacing:.04em;color:#CFE0FF}
+  .statbar{display:flex;align-items:center;gap:14px;margin:22px 0 0;padding:16px 18px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(120deg,rgba(47,111,237,.14),var(--surface) 65%)}
+  .statbar .pct{font-size:1.45rem;font-weight:800;color:var(--blue-soft);min-width:58px;text-align:center}
+  .trackline{flex:1}
+  .trackline .rail{height:9px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden}
+  .trackline .fill{height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--blue),var(--blue-soft));transition:width .35s ease}
+  .trackline .label{font-size:.76rem;color:var(--muted);margin-top:6px}
+  .block{padding:26px 0;border-top:1px solid var(--line);margin-top:20px}
+  h2{font-size:1.28rem;margin:0 0 6px;line-height:1.45}
+  h2 .num{color:var(--blue-soft);font-size:.72rem;letter-spacing:.16em;display:block;margin-bottom:5px;font-weight:600}
+  .goal{color:var(--muted);margin:0 0 16px;font-size:.92rem}
+  ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:8px;counter-reset:s}
+  ol.steps li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 14px}
+  ol.steps label{display:flex;gap:11px;align-items:flex-start;cursor:pointer}
+  input[type=checkbox]{appearance:none;width:20px;height:20px;flex:0 0 20px;margin-top:3px;border:1.5px solid rgba(140,170,220,.5);border-radius:6px;background:transparent;cursor:pointer;transition:.15s;position:relative}
+  input[type=checkbox]:checked{background:var(--blue);border-color:var(--blue)}
+  input[type=checkbox]:checked::after{content:"✓";position:absolute;inset:0;color:#fff;font-size:.8rem;line-height:17px;text-align:center}
+  .step{display:flex;gap:9px;align-items:baseline;font-size:.92rem}
+  .step .n{color:var(--blue-soft);font-size:.74rem;min-width:16px;font-weight:700}
+  .step .txt{color:#D3DEEC}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;padding-inline-start:31px}
+  .chip{font-size:.74rem;color:#BCD0EA;border:1px solid var(--line);background:rgba(47,111,237,.09);border-radius:999px;padding:3px 10px}
+  .chips.intro{margin:0 0 14px;padding:0}
+  .chip.proj-chip{border-color:rgba(46,204,143,.35);background:rgba(46,204,143,.08);color:#A9E9CC}
+  .proj{margin-top:16px;font-size:.86rem;color:var(--muted)}
+  .proj b{color:var(--text);display:block;margin-bottom:7px}
+  .proj .chips{padding:0;margin:0}
+  .result{margin:14px 0 0;font-size:.85rem;color:#A9E9CC;border-inline-start:2px solid var(--ok);padding-inline-start:10px}
+  .bar{height:5px;border-radius:999px;background:rgba(255,255,255,.08);margin-top:16px;overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .3s}
+  table{width:100%;border-collapse:collapse;font-size:.88rem;background:var(--surface);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  th,td{padding:11px 13px;text-align:right;border-bottom:1px solid var(--line)}
+  th{background:rgba(47,111,237,.13);font-size:.78rem;color:#CFE0FF}
   tr:last-child td{border-bottom:none}
   td.muted{color:var(--muted)}
-
-  .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-  .res a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--text)}
-  .res a:hover{border-color:rgba(47,111,237,.55);text-decoration:none}
-  .res small{display:block;color:var(--muted);font-size:.8rem;margin-top:3px}
-
-  footer{border-top:1px solid var(--line);margin-top:26px;padding:26px 0 40px;color:var(--muted);font-size:.85rem}
-  footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-  .install{position:fixed;inset-inline-start:18px;bottom:18px;z-index:40;display:none;align-items:center;gap:10px;background:linear-gradient(140deg,var(--blue),#1B4CB0);color:#fff;border:none;border-radius:999px;padding:12px 18px;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;box-shadow:0 12px 30px rgba(47,111,237,.35)}
-  .install:hover{transform:translateY(-2px)}
-  .install.show{display:inline-flex}
-  .reset{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 12px;font-size:.78rem;cursor:pointer;font-family:inherit}
+  td.num-cell{color:var(--blue-soft);font-weight:700;width:56px}
+  table.mini{margin:0 0 16px;font-size:.82rem}
+  .map-group{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+  .map-group b{display:block;margin-bottom:8px;font-size:.9rem}
+  .map-group .chips{padding:0;margin:0}
+  .note{margin-top:16px;padding:14px 16px;border:1px solid rgba(47,111,237,.3);border-radius:12px;background:rgba(47,111,237,.08);font-size:.88rem;color:#CBD9EE}
+  .note b{color:var(--text)}
+  footer{border-top:1px solid var(--line);margin-top:26px;padding:22px 0 60px;color:var(--muted);font-size:.82rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+  .reset{background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 12px;font-size:.76rem;cursor:pointer;font-family:inherit}
   .reset:hover{color:var(--text);border-color:rgba(47,111,237,.5)}
+  .install{position:fixed;inset-inline-start:16px;bottom:16px;z-index:40;display:none;align-items:center;gap:8px;background:linear-gradient(140deg,var(--blue),#1B4CB0);color:#fff;border:none;border-radius:999px;padding:12px 18px;font-family:inherit;font-size:.86rem;font-weight:600;cursor:pointer;box-shadow:0 12px 30px rgba(47,111,237,.35)}
+  .install.show{display:inline-flex}
 </style>
 </head>
 <body>
@@ -110,217 +93,197 @@
   <div class="wrap">
     <div class="brand">
       <div class="mark">م.إ</div>
-      <div>
-        تعلّم البرمجة
-        <small>محمد إبراهيم بخدومة عبدي</small>
-      </div>
+      <div>تعلّم البرمجة<small>محمد إبراهيم بخدومة عبدي</small></div>
     </div>
-    <nav class="nav">
-      <a href="#rules">المبادئ</a>
-      <a href="#web">الويب</a>
-      <a href="#frontend">فرونت</a>
-      <a href="#backend">باك</a>
-      <a href="#mobile">موبايل</a>
-      <a href="#desktop">ديسكتوب</a>
-      <a href="#devops">DevOps</a>
-      <a href="#data">بيانات</a>
-      <a href="#plan">خطة</a>
-      <a href="#sources">مصادر</a>
-    </nav>
+    <nav class="nav"><a href="#foundations">الأساسيات</a><a href="#frontend">Frontend</a><a href="#backend">Backend</a><a href="#web">Web</a><a href="#mobile">Mobile</a><a href="#desktop">Desktop</a><a href="#devops">DevOps</a><a href="#data">Data Science</a><a href="#compare">المقارنة</a><a href="#map">الخريطة</a><a href="#order">الترتيب</a></nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="hero">
-    <span class="eyebrow">دليل عربي عملي</span>
-    <h1>تعلّم البرمجة <span class="accent">بالترتيب الصحيح</span></h1>
-    <p class="sub">من أول سطر HTML إلى Docker وعلوم البيانات. مسار واضح لكل تخصص، مع أول مشروع يجب أن تبنيه في كل مرحلة، ومصادر مجانية موثوقة.</p>
-    <p class="owner">إعداد: <b>محمد إبراهيم بخدومة عبدي</b> · مهندس برمجيات من الجزائر · <a href="https://mohammedbekheddouma-jpg.github.io/">الموقع الشخصي</a></p>
-
+  <div class="hero">
+    <span class="eyebrow">خريطة هندسة البرمجيات</span>
+    <h1>من الأساسيات المشتركة <span class="accent">إلى التخصص</span></h1>
+    <p class="sub">أحد عشر قسماً: الأساسيات، الفرونت إند، الباك إند، الويب، الموبايل، الديسكتوب، DevOps، علوم البيانات، ثم مقارنة وتصور وترتيب مقترح. علّم على ما أنجزته ويُحفظ تقدّمك.</p>
+    <p class="owner">إعداد: <b>محمد إبراهيم بخدومة عبدي</b> · مهندس برمجيات · <a href="https://mohammedbekheddouma-jpg.github.io/">الموقع الشخصي</a></p>
     <div class="statbar">
       <div class="pct" id="totalPct">0%</div>
-      <div class="meter">
-        <div class="track"><div class="fill" id="totalFill"></div></div>
-        <div class="label">تقدّمك محفوظ في هذا المتصفح. علّم على ما أنجزته.</div>
+      <div class="trackline">
+        <div class="rail"><div class="fill" id="totalFill"></div></div>
+        <div class="label"><span id="doneCount">0</span> من 103 بنداً</div>
       </div>
     </div>
+  </div>
+
+  <section id="foundations" class="block">
+    <h2><span class="num">01 / Common Foundations</span>الأساسيات المشتركة</h2>
+    <p class="goal">هذه المرحلة مهمة قبل التخصص في أي مجال. الترتيب مقصود.</p>
+    <ol class="steps"><li><label><input type="checkbox" data-id="fnd1"><span class="step"><b class="n">1</b><span class="txt">Computer Science Fundamentals</span></span></label></li><li><label><input type="checkbox" data-id="fnd2"><span class="step"><b class="n">2</b><span class="txt">Programming Fundamentals</span></span></label></li><li><label><input type="checkbox" data-id="fnd3"><span class="step"><b class="n">3</b><span class="txt">Algorithms &amp; Data Structures</span></span></label></li><li><label><input type="checkbox" data-id="fnd4"><span class="step"><b class="n">4</b><span class="txt">OOP – Object Oriented Programming</span></span></label></li><li><label><input type="checkbox" data-id="fnd5"><span class="step"><b class="n">5</b><span class="txt">Git &amp; GitHub</span></span></label></li><li><label><input type="checkbox" data-id="fnd6"><span class="step"><b class="n">6</b><span class="txt">Linux &amp; Command Line</span></span></label></li><li><label><input type="checkbox" data-id="fnd7"><span class="step"><b class="n">7</b><span class="txt">Networking Fundamentals</span></span></label></li><li><label><input type="checkbox" data-id="fnd8"><span class="step"><b class="n">8</b><span class="txt">SQL &amp; Database Fundamentals</span></span></label></li><li><label><input type="checkbox" data-id="fnd9"><span class="step"><b class="n">9</b><span class="txt">Software Engineering Principles</span></span></label></li></ol>
+    <div class="bar"><i data-bar="fnd"></i></div>
   </section>
 
-  <section id="rules">
-    <h2><span class="num">01 / المبادئ</span>خمس قواعد تحدد الفرق</h2>
-    <p class="lead">الأساسيات لا تُختصر، والمشاريع هي التي تُثبّتها. من يبدأ بالإطار قبل اللغة يبقى ينسخ ولا يفهم.</p>
-    <div class="rules">
-      <div class="rule"><b>الأساس أولاً</b><span>لغة، منطق، بيانات، ثم إطار العمل. الإطار يتغير، والأساس يبقى.</span></div>
-      <div class="rule"><b>مشروع بعد كل مفهوم</b><span>لا تنتقل لدرس جديد قبل أن تبني شيئاً صغيراً بما تعلمته.</span></div>
-      <div class="rule"><b>مسار واحد في كل مرة</b><span>فرونت أو باك أو موبايل. التشتت يبطئك أكثر من أي شيء آخر.</span></div>
-      <div class="rule"><b>Git من اليوم الأول</b><span>كل ما تبنيه في مستودع، حتى التمارين. تاريخك البرمجي هو سيرتك.</span></div>
-      <div class="rule"><b>اقرأ الوثائق</b><span>الوثيقة الرسمية أصدق من عشر فيديوهات. تعلّم كيف تقرأها.</span></div>
-    </div>
-  </section>
 
-  <section id="tracks">
-    <h2><span class="num">02 / المسارات</span>كل تخصص ومحتواه</h2>
-    <p class="lead">سبعة مسارات. اختر مساراً رئيسياً ومساراً ثانوياً فقط، والباقي يُضاف بعد أن تصل إلى مستوى مقبول في الأول.</p>
-
-    <div class="tracks">
-
-      <article class="track" id="web">
-        <header><h3>تطوير الويب</h3><span class="tag">المسار الكامل</span></header>
-        <p class="note">المسار الأشمل والأنسب للانطلاق، لأن الواجهة تعمل على كل الأجهزة دون تثبيت.</p>
-        <ul>
-          <li><input type="checkbox" data-id="web1"><span>HTML الدلالي: عناصر، نماذج، بنية الصفحة</span></li>
-          <li><input type="checkbox" data-id="web2"><span>CSS: الصندوق، Flexbox، Grid، التصميم المتجاوب</span></li>
-          <li><input type="checkbox" data-id="web3"><span>JavaScript: المتغيرات، الدوال، المصفوفات، الكائنات، DOM</span></li>
-          <li><input type="checkbox" data-id="web4"><span>fetch و async/await واستهلاك واجهات API</span></li>
-          <li><input type="checkbox" data-id="web5"><span>Git وGitHub: الفروع، الدمج، طلبات السحب</span></li>
-          <li><input type="checkbox" data-id="web6"><span>إطار واجهة واحد: React مع Vite</span></li>
-          <li><input type="checkbox" data-id="web7"><span>باك إند: ASP.NET Core أو Node/Express</span></li>
-          <li><input type="checkbox" data-id="web8"><span>قاعدة بيانات SQL: تصميم الجداول والاستعلامات</span></li>
-          <li><input type="checkbox" data-id="web9"><span>النشر: GitHub Pages للواجهة، Azure أو Render للخادم</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> موقع شخصي ثابت، ثم واجهة تواصل ترسل بياناتها إلى API بسيط بنيته أنت.</div>
+      <section id="frontend" class="block">
+        <h2><span class="num">02 / Frontend</span>تطوير الواجهة الأمامية</h2>
+        <p class="goal">بناء واجهة المستخدم التي يتفاعل معها المستخدم.</p>
+        
+        <ol class="steps"><li><label><input type="checkbox" data-id="frontend1"><span class="step"><b class="n">1</b><span class="txt">HTML5</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend2"><span class="step"><b class="n">2</b><span class="txt">CSS3</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend3"><span class="step"><b class="n">3</b><span class="txt">Responsive Design</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend4"><span class="step"><b class="n">4</b><span class="txt">JavaScript</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend5"><span class="step"><b class="n">5</b><span class="txt">TypeScript</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend6"><span class="step"><b class="n">6</b><span class="txt">Tailwind CSS</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend7"><span class="step"><b class="n">7</b><span class="txt">React.js</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend8"><span class="step"><b class="n">8</b><span class="txt">Next.js</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend9"><span class="step"><b class="n">9</b><span class="txt">State Management (Redux / Zustand)</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend10"><span class="step"><b class="n">10</b><span class="txt">API Integration (REST API)</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend11"><span class="step"><b class="n">11</b><span class="txt">Testing (Jest / Playwright)</span></span></label></li>
+<li><label><input type="checkbox" data-id="frontend12"><span class="step"><b class="n">12</b><span class="txt">Performance &amp; Accessibility</span></span></label></li></ol>
+        <div class="proj"><b>مشاريع تطبيقية</b><div class="chips"><span class="chip proj-chip">Portfolio Website</span><span class="chip proj-chip">E-commerce Frontend</span><span class="chip proj-chip">Admin Dashboard</span><span class="chip proj-chip">Social Media Interface</span></div></div>
+        <div class="bar"><i data-bar="frontend"></i></div>
+      </section>
+      <section id="backend" class="block">
+        <h2><span class="num">03 / Backend</span>تطوير الواجهة الخلفية</h2>
+        <p class="goal">بناء منطق التطبيق والخوادم وقواعد البيانات وواجهات API.</p>
+        
+        <ol class="steps"><li><label><input type="checkbox" data-id="backend1"><span class="step"><b class="n">1</b><span class="txt">Programming Language</span></span></label><div class="chips"><span class="chip">C#</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span></div></li>
+<li><label><input type="checkbox" data-id="backend2"><span class="step"><b class="n">2</b><span class="txt">OOP &amp; Design Patterns</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend3"><span class="step"><b class="n">3</b><span class="txt">Data Structures &amp; Algorithms</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend4"><span class="step"><b class="n">4</b><span class="txt">HTTP &amp; Networking</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend5"><span class="step"><b class="n">5</b><span class="txt">RESTful APIs</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend6"><span class="step"><b class="n">6</b><span class="txt">Backend Framework</span></span></label><div class="chips"><span class="chip">ASP.NET Core</span><span class="chip">FastAPI</span><span class="chip">Spring Boot</span><span class="chip">NestJS</span></div></li>
+<li><label><input type="checkbox" data-id="backend7"><span class="step"><b class="n">7</b><span class="txt">Databases</span></span></label><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">SQL Server</span><span class="chip">MongoDB</span></div></li>
+<li><label><input type="checkbox" data-id="backend8"><span class="step"><b class="n">8</b><span class="txt">Authentication &amp; Authorization (JWT / OAuth)</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend9"><span class="step"><b class="n">9</b><span class="txt">Entity Framework Core أو ORM آخر</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend10"><span class="step"><b class="n">10</b><span class="txt">Caching (Redis)</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend11"><span class="step"><b class="n">11</b><span class="txt">Testing</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend12"><span class="step"><b class="n">12</b><span class="txt">Clean Architecture</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend13"><span class="step"><b class="n">13</b><span class="txt">Microservices</span></span></label></li>
+<li><label><input type="checkbox" data-id="backend14"><span class="step"><b class="n">14</b><span class="txt">Security &amp; Performance</span></span></label></li></ol>
+        <div class="proj"><b>مشاريع تطبيقية</b><div class="chips"><span class="chip proj-chip">E-commerce API</span><span class="chip proj-chip">Banking System</span><span class="chip proj-chip">Authentication System</span><span class="chip proj-chip">Hospital Management System</span></div></div>
+        <div class="bar"><i data-bar="backend"></i></div>
+      </section>
+      <section id="web" class="block">
+        <h2><span class="num">04 / Web</span>تطوير الويب</h2>
+        <p class="goal">إنشاء مواقع وتطبيقات ويب كاملة.</p>
+        <div class="chips intro"><span class="chip">ينقسم إلى: Frontend Development</span><span class="chip">Backend Development</span><span class="chip">Full Stack Development</span></div>
+        <ol class="steps"><li><label><input type="checkbox" data-id="web1"><span class="step"><b class="n">1</b><span class="txt">HTML</span></span></label></li>
+<li><label><input type="checkbox" data-id="web2"><span class="step"><b class="n">2</b><span class="txt">CSS</span></span></label></li>
+<li><label><input type="checkbox" data-id="web3"><span class="step"><b class="n">3</b><span class="txt">JavaScript</span></span></label></li>
+<li><label><input type="checkbox" data-id="web4"><span class="step"><b class="n">4</b><span class="txt">TypeScript</span></span></label></li>
+<li><label><input type="checkbox" data-id="web5"><span class="step"><b class="n">5</b><span class="txt">React</span></span></label></li>
+<li><label><input type="checkbox" data-id="web6"><span class="step"><b class="n">6</b><span class="txt">Next.js</span></span></label></li>
+<li><label><input type="checkbox" data-id="web7"><span class="step"><b class="n">7</b><span class="txt">Backend Framework</span></span></label></li>
+<li><label><input type="checkbox" data-id="web8"><span class="step"><b class="n">8</b><span class="txt">REST APIs</span></span></label></li>
+<li><label><input type="checkbox" data-id="web9"><span class="step"><b class="n">9</b><span class="txt">SQL / PostgreSQL</span></span></label></li>
+<li><label><input type="checkbox" data-id="web10"><span class="step"><b class="n">10</b><span class="txt">Authentication</span></span></label></li>
+<li><label><input type="checkbox" data-id="web11"><span class="step"><b class="n">11</b><span class="txt">Git &amp; GitHub</span></span></label></li>
+<li><label><input type="checkbox" data-id="web12"><span class="step"><b class="n">12</b><span class="txt">Testing</span></span></label></li>
+<li><label><input type="checkbox" data-id="web13"><span class="step"><b class="n">13</b><span class="txt">Deployment</span></span></label></li>
+<li><label><input type="checkbox" data-id="web14"><span class="step"><b class="n">14</b><span class="txt">SEO &amp; Performance</span></span></label></li></ol>
+        <p class="result">النتيجة: Full Stack Web Developer</p>
         <div class="bar"><i data-bar="web"></i></div>
-      </article>
+      </section>
+      <section id="mobile" class="block">
+        <h2><span class="num">05 / Mobile</span>تطوير تطبيقات الهاتف</h2>
+        <p class="goal">تطوير تطبيقات Android وiOS.</p>
+        <table class="mini"><thead><tr><th>المسار</th><th>التقنيات</th></tr></thead><tbody><tr><td>Native Android</td><td class="muted">Kotlin</td></tr><tr><td>Native iOS</td><td class="muted">Swift</td></tr><tr><td>Cross-platform</td><td class="muted">Flutter / Dart</td></tr><tr><td>Cross-platform</td><td class="muted">React Native / TypeScript</td></tr></tbody></table>
+        <ol class="steps"><li><label><input type="checkbox" data-id="mobile1"><span class="step"><b class="n">1</b><span class="txt">Programming Fundamentals</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile2"><span class="step"><b class="n">2</b><span class="txt">Mobile UI/UX</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile3"><span class="step"><b class="n">3</b><span class="txt">Kotlin أو Dart أو TypeScript</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile4"><span class="step"><b class="n">4</b><span class="txt">Flutter أو React Native</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile5"><span class="step"><b class="n">5</b><span class="txt">Navigation &amp; State Management</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile6"><span class="step"><b class="n">6</b><span class="txt">API Integration</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile7"><span class="step"><b class="n">7</b><span class="txt">Local Storage</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile8"><span class="step"><b class="n">8</b><span class="txt">Firebase</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile9"><span class="step"><b class="n">9</b><span class="txt">Authentication</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile10"><span class="step"><b class="n">10</b><span class="txt">Testing</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile11"><span class="step"><b class="n">11</b><span class="txt">Performance</span></span></label></li>
+<li><label><input type="checkbox" data-id="mobile12"><span class="step"><b class="n">12</b><span class="txt">Publishing (Google Play / App Store)</span></span></label></li></ol>
+        
+        <div class="bar"><i data-bar="mobile"></i></div>
+      </section>
+      <section id="desktop" class="block">
+        <h2><span class="num">06 / Desktop</span>تطوير برامج سطح المكتب</h2>
+        <p class="goal">بناء برامج تعمل على Windows وLinux وmacOS.</p>
+        
+        <ol class="steps"><li><label><input type="checkbox" data-id="desktop1"><span class="step"><b class="n">1</b><span class="txt">Programming Fundamentals</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop2"><span class="step"><b class="n">2</b><span class="txt">OOP</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop3"><span class="step"><b class="n">3</b><span class="txt">C# أو C++ أو Java</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop4"><span class="step"><b class="n">4</b><span class="txt">GUI Development</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop5"><span class="step"><b class="n">5</b><span class="txt">Frameworks</span></span></label><div class="chips"><span class="chip">C# → Windows Forms / WPF / .NET MAUI</span><span class="chip">C++ → Qt</span><span class="chip">Java → JavaFX</span><span class="chip">JavaScript → Electron</span></div></li>
+<li><label><input type="checkbox" data-id="desktop6"><span class="step"><b class="n">6</b><span class="txt">Database Integration</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop7"><span class="step"><b class="n">7</b><span class="txt">File Handling</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop8"><span class="step"><b class="n">8</b><span class="txt">APIs Integration</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop9"><span class="step"><b class="n">9</b><span class="txt">Software Architecture</span></span></label></li>
+<li><label><input type="checkbox" data-id="desktop10"><span class="step"><b class="n">10</b><span class="txt">Testing &amp; Deployment</span></span></label></li></ol>
+        <div class="proj"><b>مشاريع تطبيقية</b><div class="chips"><span class="chip proj-chip">POS System</span><span class="chip proj-chip">Inventory Management</span><span class="chip proj-chip">Accounting Software</span><span class="chip proj-chip">Hospital Management</span></div></div>
+        <div class="bar"><i data-bar="desktop"></i></div>
+      </section>
+      <section id="devops" class="block">
+        <h2><span class="num">07 / DevOps</span>هندسة DevOps</h2>
+        <p class="goal">أتمتة بناء التطبيقات واختبارها ونشرها ومراقبة تشغيلها.</p>
+        
+        <ol class="steps"><li><label><input type="checkbox" data-id="devops1"><span class="step"><b class="n">1</b><span class="txt">Linux Administration</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops2"><span class="step"><b class="n">2</b><span class="txt">Networking Fundamentals</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops3"><span class="step"><b class="n">3</b><span class="txt">Bash Scripting</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops4"><span class="step"><b class="n">4</b><span class="txt">Python Fundamentals</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops5"><span class="step"><b class="n">5</b><span class="txt">Git &amp; GitHub</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops6"><span class="step"><b class="n">6</b><span class="txt">Docker</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops7"><span class="step"><b class="n">7</b><span class="txt">Docker Compose</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops8"><span class="step"><b class="n">8</b><span class="txt">CI/CD (GitHub Actions / GitLab CI)</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops9"><span class="step"><b class="n">9</b><span class="txt">Cloud Computing (AWS / Azure / GCP)</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops10"><span class="step"><b class="n">10</b><span class="txt">Kubernetes</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops11"><span class="step"><b class="n">11</b><span class="txt">Infrastructure as Code (Terraform)</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops12"><span class="step"><b class="n">12</b><span class="txt">Configuration Management (Ansible)</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops13"><span class="step"><b class="n">13</b><span class="txt">Monitoring (Prometheus / Grafana)</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops14"><span class="step"><b class="n">14</b><span class="txt">Logging</span></span></label></li>
+<li><label><input type="checkbox" data-id="devops15"><span class="step"><b class="n">15</b><span class="txt">Security &amp; DevSecOps</span></span></label></li></ol>
+        <div class="proj"><b>مشاريع تطبيقية</b><div class="chips"><span class="chip proj-chip">Dockerize a Full Stack Application</span><span class="chip proj-chip">CI/CD Pipeline</span><span class="chip proj-chip">Deploy an Application on AWS</span><span class="chip proj-chip">Kubernetes Deployment</span></div></div>
+        <div class="bar"><i data-bar="devops"></i></div>
+      </section>
+      <section id="data" class="block">
+        <h2><span class="num">08 / Data Science</span>علوم البيانات</h2>
+        <p class="goal">استخراج المعرفة والأنماط من البيانات باستخدام الرياضيات والبرمجة والإحصاء.</p>
+        
+        <ol class="steps"><li><label><input type="checkbox" data-id="data1"><span class="step"><b class="n">1</b><span class="txt">Mathematics</span></span></label><div class="chips"><span class="chip">Linear Algebra</span><span class="chip">Calculus</span><span class="chip">Probability</span><span class="chip">Statistics</span></div></li>
+<li><label><input type="checkbox" data-id="data2"><span class="step"><b class="n">2</b><span class="txt">Python</span></span></label></li>
+<li><label><input type="checkbox" data-id="data3"><span class="step"><b class="n">3</b><span class="txt">NumPy</span></span></label></li>
+<li><label><input type="checkbox" data-id="data4"><span class="step"><b class="n">4</b><span class="txt">Pandas</span></span></label></li>
+<li><label><input type="checkbox" data-id="data5"><span class="step"><b class="n">5</b><span class="txt">Matplotlib</span></span></label></li>
+<li><label><input type="checkbox" data-id="data6"><span class="step"><b class="n">6</b><span class="txt">Seaborn</span></span></label></li>
+<li><label><input type="checkbox" data-id="data7"><span class="step"><b class="n">7</b><span class="txt">SQL</span></span></label></li>
+<li><label><input type="checkbox" data-id="data8"><span class="step"><b class="n">8</b><span class="txt">Data Cleaning</span></span></label></li>
+<li><label><input type="checkbox" data-id="data9"><span class="step"><b class="n">9</b><span class="txt">Exploratory Data Analysis (EDA)</span></span></label></li>
+<li><label><input type="checkbox" data-id="data10"><span class="step"><b class="n">10</b><span class="txt">Statistics &amp; Hypothesis Testing</span></span></label></li>
+<li><label><input type="checkbox" data-id="data11"><span class="step"><b class="n">11</b><span class="txt">Machine Learning</span></span></label></li>
+<li><label><input type="checkbox" data-id="data12"><span class="step"><b class="n">12</b><span class="txt">Scikit-learn</span></span></label></li>
+<li><label><input type="checkbox" data-id="data13"><span class="step"><b class="n">13</b><span class="txt">Deep Learning</span></span></label></li>
+<li><label><input type="checkbox" data-id="data14"><span class="step"><b class="n">14</b><span class="txt">TensorFlow / PyTorch</span></span></label></li>
+<li><label><input type="checkbox" data-id="data15"><span class="step"><b class="n">15</b><span class="txt">Model Evaluation</span></span></label></li>
+<li><label><input type="checkbox" data-id="data16"><span class="step"><b class="n">16</b><span class="txt">Data Visualization (Power BI / Tableau)</span></span></label></li>
+<li><label><input type="checkbox" data-id="data17"><span class="step"><b class="n">17</b><span class="txt">Deployment &amp; MLOps</span></span></label></li></ol>
+        <div class="proj"><b>مشاريع تطبيقية</b><div class="chips"><span class="chip proj-chip">Sales Prediction</span><span class="chip proj-chip">Customer Segmentation</span><span class="chip proj-chip">Fraud Detection</span><span class="chip proj-chip">House Price Prediction</span></div></div>
+        <div class="bar"><i data-bar="data"></i></div>
+      </section>
 
-      <article class="track" id="frontend">
-        <header><h3>الفرونت إند</h3><span class="tag">الواجهة</span></header>
-        <p class="note">ما يراه المستخدم ويعمل عليه. المطلوب فيه حسّ التصميم مع دقة التنفيذ.</p>
-        <ul>
-          <li><input type="checkbox" data-id="fe1"><span>HTML: الدلالة، إتاحة الوصول، النماذج</span></li>
-          <li><input type="checkbox" data-id="fe2"><span>CSS متقدّم: المتغيرات، الحركات، الاستجابة</span></li>
-          <li><input type="checkbox" data-id="fe3"><span>Tailwind CSS بعد إتقان CSS لا قبله</span></li>
-          <li><input type="checkbox" data-id="fe4"><span>JavaScript: الأحداث، الوحدات، التخزين المحلي</span></li>
-          <li><input type="checkbox" data-id="fe5"><span>TypeScript: الأنواع، الواجهات، الأدوية الجنيسة</span></li>
-          <li><input type="checkbox" data-id="fe6"><span>React: الحالة، الخطافات، التوجيه، النماذج</span></li>
-          <li><input type="checkbox" data-id="fe7"><span>إدارة الحالة وتجربة الاستخدام والأداء</span></li>
-          <li><input type="checkbox" data-id="fe8"><span>أدوات: npm، Vite، DevTools، Lighthouse</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> لوحة تحكم عربية RTL تستهلك API عاماً، مع بحث وفرز وتحميل تدريجي.</div>
-        <div class="bar"><i data-bar="fe"></i></div>
-      </article>
-
-      <article class="track" id="backend">
-        <header><h3>الباك إند</h3><span class="tag">المنطق والبيانات</span></header>
-        <p class="note">قلب التطبيق: المنطق، البيانات، الأمان. أقرب مسار لخبرتك في C#.</p>
-        <ul>
-          <li><input type="checkbox" data-id="be1"><span>HTTP وREST: الأفعال، رموز الحالة، الرؤوس</span></li>
-          <li><input type="checkbox" data-id="be2"><span>C# وASP.NET Core: المتحكمات، الخدمات، الحقن</span></li>
-          <li><input type="checkbox" data-id="be3"><span>SQL Server: الجداول، العلاقات، الفهارس، المعاملات</span></li>
-          <li><input type="checkbox" data-id="be4"><span>Entity Framework Core: الهجرة والاستعلامات</span></li>
-          <li><input type="checkbox" data-id="be5"><span>مصادقة: JWT، تشفير كلمات المرور، الأدوار</span></li>
-          <li><input type="checkbox" data-id="be6"><span>جودة: تحقق من المدخلات، سجلات، معالجة الأخطاء، اختبارات</span></li>
-          <li><input type="checkbox" data-id="be7"><span>أداء: فهارس، تخزين مؤقت، مهام خلفية</span></li>
-          <li><input type="checkbox" data-id="be8"><span>أمان التطبيقات: OWASP العشرة الأوائل</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> API لمهام المستخدمين بمصادقة JWT، قاعدة بيانات، اختبارات وحدة، وتوثيق Swagger.</div>
-        <div class="bar"><i data-bar="be"></i></div>
-      </article>
-
-      <article class="track" id="mobile">
-        <header><h3>تطوير الموبايل</h3><span class="tag">الهاتف</span></header>
-        <p class="note">اختر منصة واحدة أولاً. المنطق واحد، والأدوات مختلفة.</p>
-        <ul>
-          <li><input type="checkbox" data-id="mo1"><span>اختيار المسار: Flutter أو React Native أو أصلي</span></li>
-          <li><input type="checkbox" data-id="mo2"><span>بنية الشاشات والتنقل بينها</span></li>
-          <li><input type="checkbox" data-id="mo3"><span>إدارة الحالة ومزامنة الواجهة</span></li>
-          <li><input type="checkbox" data-id="mo4"><span>تخزين محلي: SQLite أو AsyncStorage</span></li>
-          <li><input type="checkbox" data-id="mo5"><span>استهلاك API والتعامل مع ضعف الشبكة</span></li>
-          <li><input type="checkbox" data-id="mo6"><span>الإشعارات والصلاحيات</span></li>
-          <li><input type="checkbox" data-id="mo7"><span>البناء والنشر في Play Store أو App Store</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> تطبيق مهام يعمل بلا إنترنت ويزامن البيانات عند عودة الاتصال.</div>
-        <div class="bar"><i data-bar="mo"></i></div>
-      </article>
-
-      <article class="track" id="desktop">
-        <header><h3>تطوير الديسكتوب</h3><span class="tag">سطح المكتب</span></header>
-        <p class="note">أقرب مسار إلى خلفيتك الحالية في C# وتطبيقات Windows.</p>
-        <ul>
-          <li><input type="checkbox" data-id="de1"><span>اختيار التقنية: WPF أو WinUI 3 أو Tauri</span></li>
-          <li><input type="checkbox" data-id="de2"><span>نمط MVVM وفصل الواجهة عن المنطق</span></li>
-          <li><input type="checkbox" data-id="de3"><span>الارتباط بالبيانات والتحقق من المدخلات</span></li>
-          <li><input type="checkbox" data-id="de4"><span>الخيوط والمهام والعمليات الطويلة بلا تجميد</span></li>
-          <li><input type="checkbox" data-id="de5"><span>قاعدة بيانات محلية SQLite وEF Core</span></li>
-          <li><input type="checkbox" data-id="de6"><span>الحزم والتثبيت والتحديث التلقائي</span></li>
-          <li><input type="checkbox" data-id="de7"><span>التواصل مع خدمات خارجية وAPI</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> برنامج سطح مكتب لإدارة الفواتير مع قاعدة بيانات محلية وتصدير PDF.</div>
-        <div class="bar"><i data-bar="de"></i></div>
-      </article>
-
-      <article class="track" id="devops">
-        <header><h3>DevOps</h3><span class="tag">التشغيل والنشر</span></header>
-        <p class="note">ليس لغة تتعلمها، بل طريقة عمل تجعل ما بنيته يعمل ويكبر بأمان.</p>
-        <ul>
-          <li><input type="checkbox" data-id="do1"><span>Linux: الصلاحيات، العمليات، الشبكة، systemd</span></li>
-          <li><input type="checkbox" data-id="do2"><span>Bash وسكربتات الأتمتة</span></li>
-          <li><input type="checkbox" data-id="do3"><span>Git في الفريق: الفروع، المراجعة، الإصدارات</span></li>
-          <li><input type="checkbox" data-id="do4"><span>Docker: الصور، الحاويات، docker-compose</span></li>
-          <li><input type="checkbox" data-id="do5"><span>CI/CD مع GitHub Actions: بناء واختبار ونشر</span></li>
-          <li><input type="checkbox" data-id="do6"><span>سحابة: Azure أو AWS، خدمات الحوسبة والتخزين</span></li>
-          <li><input type="checkbox" data-id="do7"><span>البنية كرمز: Terraform</span></li>
-          <li><input type="checkbox" data-id="do8"><span>المراقبة والسجلات والتنبيهات والأمان وإدارة الأسرار</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> صوّر أحد تطبيقاتك في Docker وانشره تلقائياً عبر GitHub Actions عند كل دفع.</div>
-        <div class="bar"><i data-bar="do"></i></div>
-      </article>
-
-      <article class="track" id="data">
-        <header><h3>علوم البيانات</h3><span class="tag">التحليل والذكاء</span></header>
-        <p class="note">المهارة الحاسمة فيها الإحصاء وتنظيف البيانات، لا النماذج المتقدمة.</p>
-        <ul>
-          <li><input type="checkbox" data-id="ds1"><span>Python: المتغيرات، الدوال، الهياكل، الملفات</span></li>
-          <li><input type="checkbox" data-id="ds2"><span>NumPy وPandas لتنظيف البيانات وتحليلها</span></li>
-          <li><input type="checkbox" data-id="ds3"><span>SQL: تجميع البيانات وربط الجداول</span></li>
-          <li><input type="checkbox" data-id="ds4"><span>إحصاء: التوزيعات، الارتباط، اختبار الفرضيات</span></li>
-          <li><input type="checkbox" data-id="ds5"><span>التصوير البياني: matplotlib وseaborn</span></li>
-          <li><input type="checkbox" data-id="ds6"><span>تعلم الآلة مع scikit-learn: انحدار، تصنيف، تقييم</span></li>
-          <li><input type="checkbox" data-id="ds7"><span>التعلم العميق لاحقاً: PyTorch</span></li>
-          <li><input type="checkbox" data-id="ds8"><span>نشر النموذج ومراقبته</span></li>
-        </ul>
-        <div class="proj"><b>أول مشروع:</b> تحليل مجموعة بيانات حقيقية، واستخلاص ثلاث نتائج قابلة للتنفيذ بنموذج تنبؤي بسيط.</div>
-        <div class="bar"><i data-bar="ds"></i></div>
-      </article>
-
-    </div>
+  <section id="compare" class="block">
+    <h2><span class="num">09 / Comparison</span>مقارنة التخصصات</h2>
+    <p class="goal">ماذا يبني أو يعمل صاحب كل تخصص.</p>
+    <table><thead><tr><th>التخصص</th><th>ماذا تبني أو تعمل</th></tr></thead><tbody><tr><td>Frontend</td><td class="muted">واجهات المستخدم</td></tr><tr><td>Backend</td><td class="muted">الخوادم والمنطق وقواعد البيانات</td></tr><tr><td>Full Stack</td><td class="muted">Frontend + Backend</td></tr><tr><td>Web</td><td class="muted">مواقع وتطبيقات الويب</td></tr><tr><td>Mobile</td><td class="muted">تطبيقات الهواتف</td></tr><tr><td>Desktop</td><td class="muted">برامج الحاسوب</td></tr><tr><td>DevOps</td><td class="muted">النشر والبنية التحتية والأتمتة</td></tr><tr><td>Data Science</td><td class="muted">تحليل البيانات والتنبؤ</td></tr></tbody></table>
   </section>
 
-  <section id="plan">
-    <h2><span class="num">03 / الخطة</span>اثنا عشر شهراً واقعية</h2>
-    <p class="lead">بمعدل عشر ساعات أسبوعياً. المسار الرئيسي: تطوير الويب مع باك إند C#. البقية تُبنى فوقه لاحقاً.</p>
-    <table>
-      <thead><tr><th>الفترة</th><th>المحتوى</th><th>الناتج</th></tr></thead>
-      <tbody>
-        <tr><td>الشهر 1</td><td>HTML، CSS، أساسيات JavaScript</td><td class="muted">صفحتان متجاوبتان</td></tr>
-        <tr><td>الشهر 2</td><td>JavaScript متقدم، DOM، fetch، Git</td><td class="muted">واجهة تستهلك API عاماً</td></tr>
-        <tr><td>الشهر 3</td><td>React، TypeScript، بناء المشاريع</td><td class="muted">لوحة تحكم كاملة</td></tr>
-        <tr><td>الشهر 4</td><td>C#، ASP.NET Core، REST</td><td class="muted">API موثّق بـ Swagger</td></tr>
-        <tr><td>الشهر 5</td><td>SQL Server، EF Core، مصادقة</td><td class="muted">API مع مستخدمين وأدوار</td></tr>
-        <tr><td>الشهر 6</td><td>ربط الواجهة بالخادم، نشر، اختبارات</td><td class="muted">تطبيق كامل يعمل على الإنترنت</td></tr>
-        <tr><td>الشهر 7</td><td>دمج المشاريع في محفظة واحدة ومدونة</td><td class="muted">محفظة جاهزة للتقديم</td></tr>
-        <tr><td>الشهر 8</td><td>Linux، Bash، Docker</td><td class="muted">تطبيق يعمل داخل حاوية</td></tr>
-        <tr><td>الشهر 9</td><td>CI/CD مع GitHub Actions، مبادئ السحابة</td><td class="muted">نشر تلقائي عند كل دفع</td></tr>
-        <tr><td>الشهر 10</td><td>مشروع مفتوح المصدر أو عمل حر حقيقي</td><td class="muted">تجربة فريق ومستخدمون حقيقيون</td></tr>
-        <tr><td>الشهر 11</td><td>Python وPandas وأساسيات الإحصاء</td><td class="muted">تحليل بيانات من مشروعك</td></tr>
-        <tr><td>الشهر 12</td><td>تعميق التخصص، سيرة، مقابلات تقنية</td><td class="muted">استعداد للتقديم على الوظائف</td></tr>
-      </tbody>
-    </table>
+  <section id="map" class="block">
+    <h2><span class="num">10 / The Full Map</span>الخريطة الشاملة لهندسة البرمجيات</h2>
+    <p class="goal">صورة ذهنية لكيفية ارتباط المجالات بعضها ببعض.</p>
+    <div class="map-group"><b>Computer Science Fundamentals</b><div class="chips"><span class="chip">Programming</span><span class="chip">Algorithms</span><span class="chip">OOP</span><span class="chip">Databases</span><span class="chip">Networking</span><span class="chip">Linux</span></div></div><div class="map-group"><b>Application Development</b><div class="chips"><span class="chip">Frontend</span><span class="chip">Backend</span><span class="chip">Web</span><span class="chip">Mobile</span><span class="chip">Desktop</span></div></div><div class="map-group"><b>Other Engineering Fields</b><div class="chips"><span class="chip">DevOps</span><span class="chip">Data Science</span><span class="chip">AI / ML</span><span class="chip">Cybersecurity</span><span class="chip">Cloud</span></div></div><div class="map-group"><b>Professional Software Engineer</b><div class="chips"><span class="chip">Design</span><span class="chip">Develop</span><span class="chip">Test</span><span class="chip">Secure</span><span class="chip">Deploy</span><span class="chip">Maintain</span></div></div>
   </section>
 
-  <section id="sources">
-    <h2><span class="num">04 / المصادر</span>مجانية وموثوقة</h2>
-    <p class="lead">لا تجمع عشرين مصدراً. اختر واحداً لكل مرحلة وأكمله.</p>
-    <div class="res">
-      <a href="https://developer.mozilla.org/ar/" target="_blank" rel="noopener">MDN Web Docs<small>المرجع الرسمي لويب: HTML وCSS وJavaScript، وفيه نسخة عربية</small></a>
-      <a href="https://learn.microsoft.com/ar-sa/dotnet/csharp/" target="_blank" rel="noopener">Microsoft Learn<small>مسار C# وASP.NET Core وAzure، بالعربية والإنجليزية</small></a>
-      <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener">freeCodeCamp<small>تمارين ومشاريع بشهادات مجانية للويب</small></a>
-      <a href="https://roadmap.sh/" target="_blank" rel="noopener">roadmap.sh<small>خرائط مسارات لكل تخصص مع روابط لكل مهارة</small></a>
-      <a href="https://docs.docker.com/get-started/" target="_blank" rel="noopener">Docker Docs<small>من أول حاوية إلى docker-compose</small></a>
-      <a href="https://docs.github.com/ar/actions" target="_blank" rel="noopener">GitHub Actions<small>أتمتة البناء والاختبار والنشر خطوة بخطوة</small></a>
-      <a href="https://exercism.org/" target="_blank" rel="noopener">Exercism<small>تمارين مراجعة بشرية في C# وJavaScript وPython</small></a>
-      <a href="https://www.kaggle.com/learn" target="_blank" rel="noopener">Kaggle Learn<small>دروس قصيرة في بايثون وتحليل البيانات</small></a>
-    </div>
+  <section id="order" class="block">
+    <h2><span class="num">11 / Suggested Order</span>الترتيب المقترح</h2>
+    <p class="goal">بما أن لديك أساساً في C# وSQL وTypeScript وReact، لا تحاول تعلّم كل هذه التخصصات في الوقت نفسه.</p>
+    <table><thead><tr><th>المرحلة</th><th>التخصص</th></tr></thead><tbody><tr><td class="num-cell">1</td><td>Programming + CS Fundamentals</td></tr><tr><td class="num-cell">2</td><td>Frontend Development</td></tr><tr><td class="num-cell">3</td><td>Backend Development</td></tr><tr><td class="num-cell">4</td><td>Full Stack Web Development</td></tr><tr><td class="num-cell">5</td><td>Linux + Networking</td></tr><tr><td class="num-cell">6</td><td>DevOps + Cloud</td></tr><tr><td class="num-cell">7</td><td>Mobile Development</td></tr><tr><td class="num-cell">8</td><td>Desktop Development</td></tr><tr><td class="num-cell">9</td><td>Data Science + AI</td></tr></tbody></table>
+    <div class="note"><b>النصيحة الأساسية:</b> الأساسيات أولاً، ثم تخصص واحد تكتمله بمشاريع حقيقية، وبعدها تُضاف بقية المجالات فوق أساس صلب. من يتعلم السطحيات في كل المجالات لا يُتقن شيئاً، ومن يُتقن مساراً واحداً يجد الباقي أسهل.</div>
   </section>
 
 </main>
@@ -335,49 +298,46 @@
   </div>
 </footer>
 
+<button class="install" id="installBtn" type="button">تثبيت التطبيق على الهاتف</button>
+
 <script>
 (function(){
-  var KEY='learn-progress-v1';
-  var boxes=[].slice.call(document.querySelectorAll('.track input[type=checkbox]'));
+  var KEY='learn-progress-v2';
+  var boxes=[].slice.call(document.querySelectorAll('input[type=checkbox]'));
   var state={};
   try{ state=JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ state={}; }
-
   function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
-
   function refresh(){
     var done=0;
     boxes.forEach(function(b){ if(state[b.dataset.id]){ b.checked=true; done++; } });
-    document.querySelectorAll('.track').forEach(function(card){
-      var items=[].slice.call(card.querySelectorAll('input[type=checkbox]'));
-      var d=items.filter(function(i){ return i.checked; }).length;
-      var bar=card.querySelector('.bar i');
-      if(bar) bar.style.width = items.length ? (d/items.length*100)+'%' : '0%';
+    var groups={};
+    boxes.forEach(function(b){
+      var pre=b.dataset.id.replace(/\d+$/,'');
+      groups[pre]=groups[pre]||[0,0];
+      groups[pre][1]++; if(b.checked) groups[pre][0]++;
     });
-    var total=boxes.length||1;
-    var pct=Math.round(done/total*100);
-    var t=document.getElementById('totalPct'), f=document.getElementById('totalFill');
+    Object.keys(groups).forEach(function(k){
+      var bar=document.querySelector('[data-bar="'+k+'"]');
+      if(bar){ bar.style.width=(groups[k][0]/groups[k][1]*100)+'%'; }
+    });
+    var total=boxes.length||1, pct=Math.round(done/total*100);
+    var t=document.getElementById('totalPct'), f=document.getElementById('totalFill'), d=document.getElementById('doneCount');
     if(t) t.textContent=pct+'%';
     if(f) f.style.width=pct+'%';
+    if(d) d.textContent=done;
   }
-
   boxes.forEach(function(b){
     b.addEventListener('change',function(){
       if(b.checked) state[b.dataset.id]=1; else delete state[b.dataset.id];
       save(); refresh();
     });
   });
-
-  var btn=document.getElementById('resetBtn');
-  if(btn) btn.addEventListener('click',function(){
+  var r=document.getElementById('resetBtn');
+  if(r) r.addEventListener('click',function(){
     state={}; save(); boxes.forEach(function(b){ b.checked=false; }); refresh();
   });
-
   refresh();
-})();
-</script>
-<button class="install" id="installBtn" type="button">تثبيت التطبيق على الهاتف</button>
-<script>
-(function(){
+
   if('serviceWorker' in navigator){
     window.addEventListener('load',function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
   }
