@@ -1,0 +1,19 @@
+{
+  "name": "تعلّم البرمجة | محمد إبراهيم بخدومة عبدي",
+  "short_name": "تعلّم البرمجة",
+  "description": "دليل عربي عملي لتعلّم تطوير الويب والموبايل والديسكتوب، الفرونت إند والباك إند، DevOps وعلوم البيانات، مع خطة اثني عشر شهراً وتتبّع تقدّم.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050A16",
+  "theme_color": "#050A16",
+  "categories": ["education", "productivity", "books"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
